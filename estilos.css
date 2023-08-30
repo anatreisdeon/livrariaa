@@ -69,12 +69,36 @@ footer {
     background-color: #a958eb;
     color: #fff;
     border: none;
-    padding: 8px 16px;
+    padding: 7px 14px;
     margin-top: 10px;
     cursor: pointer; /* Muda o cursor do mouse */
     transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+    
 }
 
 .card button:hover {
     background-color: #bd7af5f5; /* Muda a cor de fundo ao passar o mouse */
+}
+
+nav ul li:hover {
+   border-radius:8px ;
+   background-color: #b87de7;
+}
+
+nav ul li {
+    padding: 6px 12px;
+    transition: all 1s ease;
+}
+
+/* Design Responsivo */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% - 40px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
 }
