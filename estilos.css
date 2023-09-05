@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
 * {
     margin: 0; /* zerar a margem de todos os elementos */
@@ -6,7 +7,7 @@
     box-sizing: border-box; /* incluir padding e borda no cálculo do tamanho do elemento */
 }
 body {
-    font-family: 'Cormorant Garamond';
+    font-family: 'libre baskerville';
     background-color: #d49cffd0;
 }
 header {
