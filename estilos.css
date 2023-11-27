@@ -45,7 +45,7 @@ main {
 }
 .card {
     width: calc(33.33% - 20px); /* 33.33% - 20px */
-    height: 500px; /* altura de 500px */
+    height: 550px; /* altura de 500px */
     margin: 10px; /* margem de 10px para cima e para baixo */
     padding: 20px;
     background-color: #e8ccff;
