@@ -26,8 +26,41 @@
         <section class="container">
             <form>
                 <fieldset>
-                    <legend>Cadastro de Livros</legend>
+                    <legend>Cadastro</legend><BR>
+                    Nome: 
+                    <input type="text"
+                    minlength="5" maxlength="50"
+                    pattern="[a-z]{5,12}"
+                    name="nome" id="idNome" required> <BR>
 
+                    CPF:
+                    <input type="text" name="cpf" 
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2} " 
+                    maxlength="11"
+                    title="Digite um CPF válido"
+                    input placeholder= xxx.xxx.xxx-xx 
+                    id="idCPF" required> <br>  
+
+                    Email: 
+                    <input placeholder="nada@nada.com" 
+                   title="Uma email válido"
+                   type="email" name="email" 
+                   id="idEmail" required> <br>
+                   
+
+                   NÚMERO: 
+                   <input type="text" name="número" 
+                   pattern="(\d{2})\d{5}-\d{4}" 
+                   title="Digite um número válido"
+                   input placeholder= "(xx) xxxxx-xxxx"  id="Número" required> <br>
+                    
+                  
+
+                
+                    <br>
+                    <legend>
+                      INFORMAÇÕES DO LIVRO
+                    </legend> <br>
                     <div class="input-container">
                         <label for="titulo">Título</label>
                         <input type="text" name="titulo" id="titulo" placeholder="Título do livro" required autofocus>
@@ -75,6 +108,7 @@
                         <label for="paginas">Páginas</label>
                         <input type="number" name="paginas" id="paginas" placeholder="Número de páginas" required>
                     </div>
+
                     <div class="input-container">
                         <label for="categoria">Categoria</label>
                         <select name="categoria" id="categoria" required>
