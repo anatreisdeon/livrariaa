@@ -38,11 +38,11 @@
             else {
                 alert("Complete o cadastro para concluir a compra!!")
 
-                if (sessionStorage.getItem(quantia)){
+                if (sessionStorage.getItem(quantia)) {
                     var quantia = JSON.parse(sessionStorage.getItem('quantia'));
-                    quantia=0
+                    quantia = 0
                 }
-              
+
             }
         }
         function multiplicar(id) {
@@ -54,6 +54,10 @@
             h1.innerHTML = 'R$ ' + (valorInput * preço_float)
 
         }
+
+   
+      
+        
 
 
     </script>
