@@ -50,14 +50,57 @@
             var valorInput = parseInt(input.value);
             var preço = document.getElementById("preço_" + id).innerHTML
             var preço_float = parseFloat(preço)
+            var area = document.getElementById('val_' + id + 'produto')
             var h1 = document.getElementById('val_' + id)
             h1.innerHTML = 'R$ ' + (valorInput * preço_float)
 
+         
+    }
+
+
+
+    
+    function validarFormulario(id) {
+            event.preventDefault();
+            var nome = document.getElementById('nome').value
+            var cpf = document.getElementById('cpf').value
+            var email = document.getElementById('email').value
+            var contato = document.getElementById('contato').value
+            var cep = document.getElementById('cep').value
+            var area = document.getElementById('val_' + id + 'produto').value
+            var cpfRegex = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2};
+            var emailRegex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/; }
+
+            
+       
+
+            function preencherTextarea(id) {
+            localStorage.getItem('vendas')
+            var vendas = JSON.parse(localStorage.getItem('vendas'));
+            for(var i = vendas.length -1; i < vendas.length; i++){
+                var preço = vendas[i]
+                console.log(preço)
+            }
+
+            if (localStorage.getItem('produto')) {
+                var livro = JSON.parse(localStorage.getItem('produto'));
+            }
+            
+            if (localStorage.getItem('produto')) {
+                var nome2 = JSON.parse(localStorage.getItem('produto'));
+            }
+              quant = parseInt(document.getElementById('inp').value); 
+              quant2 = parseInt(document.getElementById('inj').value);
+              quant3 = parseInt(document.getElementById('ins').value);
+        var texto = document.getElementById('nome').value + ' comprou no valor de: R$' + preço + ' uma quantia de: ' + quant + ' unidades do(a) ' + livro +' e ' + quant2 + ' unidades do(a) ' + quant3 + ' unidades do(a) ' + produto +'.'
+        document.getElementById("tea").value = texto;
         }
 
-   
-      
         
+       
+
+
+
 
 
     </script>
@@ -80,7 +123,7 @@
         <section class="cards">
             <div class="card">
                 <img src="img/Um-Corpo-na-Biblioteca.jpg" alt="Livro 1">
-                <h2>Um Corpo na Biblioteca</h2>
+                <h2 id="produto">Um Corpo na Biblioteca</h2>
                 <p>Autor: Agatha Cristie</p>
 
                 <button onclick="mais('inp')">+</button>
@@ -93,7 +136,7 @@
 
             <div class="card">
                 <img src="img/colleen hoover.jpeg" alt="Livro 2">
-                <h2>É Assim Que Acaba</h2>
+                <h2 id="produto">É Assim Que Acaba</h2>
                 <p>Autor: Colleen Hoover</p>
 
                 <button onclick="mais('ins')">+</button>
@@ -106,7 +149,7 @@
 
             <div class="card">
                 <img src="img/alyssa cole.jpg" alt="Livro 3">
-                <h2>Quando Ninguém Está Olhando</h2>
+                <h2 id="produto">Quando Ninguém Está Olhando</h2>
                 <p>Autor: Alyssa Cole</p>
 
                 <button onclick="mais('inj')">+</button>
