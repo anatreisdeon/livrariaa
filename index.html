@@ -7,6 +7,7 @@
     <title>Livraria</title>
     <link rel="stylesheet" href="estilos.css">
 
+
     <script>
         function mais(id) {
             var input = document.getElementById(id);
@@ -24,49 +25,36 @@
             multiplicar(id)
         }
 
-        function verificarCompras(id) {
+
+        function verificarCompra(id) {
             var input = document.getElementById(id)
             var valorAtual = parseInt(input.value);
+            sessionStorage.setItem('quantia', JSON.stringify(valorAtual))
 
             if (valorAtual === 0) {
                 alert('Você precisa selecionar 1 item a compra.');
+                event.preventDefault();
             }
-            else (
+            else {
                 alert("Complete o cadastro para concluir a compra!!")
-            )
-        }
 
+                if (sessionStorage.getItem(quantia)){
+                    var quantia = JSON.parse(sessionStorage.getItem('quantia'));
+                    quantia=0
+                }
+              
+            }
+        }
         function multiplicar(id) {
             var input = document.getElementById(id)
             var valorInput = parseInt(input.value);
             var preço = document.getElementById("preço_" + id).innerHTML
             var preço_float = parseFloat(preço)
             var h1 = document.getElementById('val_' + id)
-            h1.innerHTML = 'R$ ' + (valorInput *preço_float)
+            h1.innerHTML = 'R$ ' + (valorInput * preço_float)
 
         }
 
-
-        function verificarCompras(id) {
-            var input = document.getElementById(id)
-            var valorAtual = parseInt(input.value);
-
-            if (valorAtual === 0) {
-                alert('Você precisa selecionar 1 item a compra.');
-            }
-            else (
-                alert("Complete o cadastro para concluir a compra!!")
-            )
-
-        }
-
-       
-
-
-       
-
-       
-       
 
     </script>
 </head>
@@ -90,40 +78,41 @@
                 <img src="img/Um-Corpo-na-Biblioteca.jpg" alt="Livro 1">
                 <h2>Um Corpo na Biblioteca</h2>
                 <p>Autor: Agatha Cristie</p>
-                
+
                 <button onclick="mais('inp')">+</button>
                 <input id="inp" type="number" id="numero" value="0" min="0" readonly>
                 <button onclick="menos('inp')">-</button>
                 <p>Preço: <span id="preço_inp">32,00</span></p>
                 <p id="val_inp">R$0</p>
-                <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+                <button><a href="cadastro.html" onclick="verificarCompra('inp')">Comprar</a></button>
             </div>
 
             <div class="card">
                 <img src="img/colleen hoover.jpeg" alt="Livro 2">
                 <h2>É Assim Que Acaba</h2>
                 <p>Autor: Colleen Hoover</p>
-                
+
                 <button onclick="mais('ins')">+</button>
                 <input id="ins" type="number" id="numero" value="0" min="0" readonly>
                 <button onclick="menos('ins')">-</button>
                 <p>Preço: <span id="preço_ins">35,00</span></p>
                 <p id="val_ins">R$0</p>
-                <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+                <button><a href="cadastro.html" onclick="verificarCompra('ins')">Comprar</a></button>
             </div>
 
             <div class="card">
                 <img src="img/alyssa cole.jpg" alt="Livro 3">
                 <h2>Quando Ninguém Está Olhando</h2>
                 <p>Autor: Alyssa Cole</p>
-               
+
                 <button onclick="mais('inj')">+</button>
                 <input id="inj" type="number" id="numero" value="0" min="0" readonly>
                 <button onclick="menos('inj')">-</button>
                 <p>Preço: <span id="preço_inj">38,00</span></p>
                 <p id="val_inj">R$0</p>
-                <button><a href="cadastro.html" onclick="verificarCompra()">Comprar</a></button>
+                <button><a href="cadastro.html" onclick="verificarCompra('inj')">Comprar</a></button>
             </div>
+
         </section>
 
 
